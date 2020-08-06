@@ -14,6 +14,7 @@ import com.delivery.presenter.usecases.UseCaseExecutorImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.mock.mockito.SpyBean;
@@ -35,7 +36,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(value = StoreController.class)
+@WebMvcTest(value = StoreController.class, excludeAutoConfiguration = SecurityAutoConfiguration.class)
 public class StoreControllerTest extends BaseControllerTest {
 
     @Configuration
