@@ -105,7 +105,7 @@ public class CousineControllerTest extends BaseControllerTest {
         // then
         mockMvc.perform(payload)
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$", hasSize(1)))
                 .andExpect(jsonPath("$[0].id", is(store.getId().getNumber().intValue())))
                 .andExpect(jsonPath("$[0].name", is(store.getName())))
@@ -133,7 +133,7 @@ public class CousineControllerTest extends BaseControllerTest {
         // then
         mockMvc.perform(payload)
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$", hasSize(cousines.size())))
                 .andExpect(jsonPath("$[0].id", is(firstCousine.getId().getNumber().intValue())))
                 .andExpect(jsonPath("$[0].name", is(firstCousine.getName())));
@@ -157,7 +157,7 @@ public class CousineControllerTest extends BaseControllerTest {
         // then
         mockMvc.perform(payload)
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$", hasSize(cousines.size())))
                 .andExpect(jsonPath("$[0].id", is(firstCousine.getId().getNumber().intValue())))
                 .andExpect(jsonPath("$[0].name", is(firstCousine.getName())));

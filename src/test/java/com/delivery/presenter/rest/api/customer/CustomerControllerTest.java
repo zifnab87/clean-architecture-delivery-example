@@ -100,7 +100,7 @@ public class CustomerControllerTest extends BaseControllerTest {
         // then
         mockMvc.perform(request)
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.success", is(true)))
                 .andExpect(jsonPath("$.token", is(token)));
     }
@@ -124,7 +124,7 @@ public class CustomerControllerTest extends BaseControllerTest {
         // then
         mockMvc.perform(request)
                 .andExpect(status().isBadRequest())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.success", is(false)))
                 .andExpect(jsonPath("$.message", is("Error")));
     }
@@ -151,7 +151,7 @@ public class CustomerControllerTest extends BaseControllerTest {
         // then
         mockMvc.perform(request)
                 .andExpect(status().isBadRequest())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.success", is(false)))
                 .andExpect(jsonPath("$.message", is("Error")));
     }
@@ -185,7 +185,7 @@ public class CustomerControllerTest extends BaseControllerTest {
         // then
         mockMvc.perform(request)
                 .andExpect(status().isCreated())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.success", is(true)))
                 .andExpect(header().string("location", "http://localhost/Customer/" + customer.getId().getNumber()))
                 .andExpect(jsonPath("$.message", is("registered successfully")));
