@@ -2,7 +2,7 @@
 
 # Clean Architecture Example
 
-Java 11 + Maven + Swagger Spring Doc
+Java 11 + Maven + Spring Boot 2.2.6.RELEASE + Swagger Spring Doc
 
 ## Description
 
