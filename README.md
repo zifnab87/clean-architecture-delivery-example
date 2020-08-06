@@ -2,13 +2,11 @@
 
 # Clean Architecture Example
 
+Java 11 + Maven + Swagger Spring Doc
+
 ## Description
 
 The architecture of the project follows the principles of Clean Architecture. It is a simple food delivery app. One can list stores, cousines, products and create food orders. JWT it is used for authentication.
-
-## Running
-
-`./gradlew bootRun`
 
 ## Architecture
 
